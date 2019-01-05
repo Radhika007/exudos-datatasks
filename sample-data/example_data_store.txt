@@ -1,0 +1,263 @@
+User {
+    "_id": {
+        "$oid": "5ace2730b0b7c599bac20e1a"
+    },
+    "username": "test.student",
+    "password": "2580da11b2b6463d67d8c0337669e0e1f2194af0",
+    "type": "student",
+    "student": {
+        "$oid": "5ace2878b0b7c599bac20e1c"
+    }
+}
+User {
+    "_id": {
+        "$oid": "5ace74d6b75056a4d78815a8"
+    },
+    "username": "test.faculty",
+    "password": "57ee13c26edf511ef39f4cafa467a7727ff5a91f",
+    "type": "faculty",
+    "faculty": {
+        "$oid": "5b1e5df9d339e76b091a2a07"
+    }
+}
+
+Student {
+    "_id": {
+        "$oid": "5ace2878b0b7c599bac20e1c"
+    },
+    "name": "Test Student One",
+    "enrolmentNumber": "180020209999",
+    "programme": null,
+    "school": {
+        "$oid": "5ace2636b0b7c599bac20e11"
+    },
+    "phoneNumber": 9.8300983e+09,
+    "emailId": "exudos@gdgoenka.ac.in",
+    "user": {
+        "$oid": "5ace2730b0b7c599bac20e1a"
+    },
+    "semesters": [
+        {
+            "$oid": "5b200d1f34baea222ebd2c17"
+        }
+    ],
+    "currentSemester": {
+        "$oid": "5b200d1f34baea222ebd2c17"
+    },
+    "gender": "male"
+}
+
+Faculty {
+    "_id": {
+        "$oid": "5b1e5df9d339e76b091a2a07"
+    },
+    "name": "Test Faculty One",
+    "gender": "female",
+    "employeeId": 999.0,
+    "currentSession": {
+        "$oid": "5b200d1f34baea222ebd2c18"
+    },
+    "emailId": "exudos@gdgoenka.ac.in",
+    "user": {
+        "$oid": "5ace74d6b75056a4d78815a8"
+    },
+    "school": {
+        "$oid": "5ace2636b0b7c599bac20e11"
+    }
+}
+
+School {
+    "_id": {
+        "$oid": "5ace2636b0b7c599bac20e11"
+    },
+    "name": "Management",
+    "programmes": [
+        {
+            "$oid": "5ae5d9d05d10e35bdbe1a543"
+        }
+    ]
+}
+
+Programme {
+    "_id": {
+        "$oid": "5ae5d9d05d10e35bdbe1a543"
+    },
+    "name": "BBA",
+    "school": {
+        "$oid": "5ace2636b0b7c599bac20e11"
+    },
+    "stream": "",
+    "type": "Bachelor",
+    "numberOfSemesters": 6.0
+}
+
+Session {
+    "_id": {
+        "$oid": "5b200d1f34baea222ebd2c18"
+    },
+    "code": "2018-19"
+}
+
+Semester {
+    "_id": {
+        "$oid": "5b200d1f34baea222ebd2c17"
+    },
+    "number": 1.0,
+    "programme": {
+        "$oid": "5ae5d9d05d10e35bdbe1a543"
+    },
+    "session": {
+        "$oid": "5b200d1f34baea222ebd2c18"
+    },
+    "course": [
+        {
+            "$oid": "5b200d1f34baea222ebd2c19"
+        },
+        {
+            "$oid": "5b200d1f34baea222ebd2c1a"
+        }
+    ]
+}
+
+Notice {
+    "_id": {
+        "$oid": "5b200d2234baea222ebd2c1f"
+    },
+    "dateTime": {
+        "$date": "2018-06-12T18:12:47.919Z"
+    },
+    "content": "A sample notice that is only intended for SoM students.",
+    "school": {
+        "$oid": "5ace2636b0b7c599bac20e11"
+    }
+}
+Notice {
+    "_id": {
+        "$oid": "5b200d2234baea222ebd2c20"
+    },
+    "dateTime": {
+        "$date": "2018-06-12T18:12:47.919Z"
+    },
+    "content": "A sample notice that is only intended for ITM1002 students.",
+    "courses": [
+        {
+            "$oid": "5b200d1f34baea222ebd2c1a"
+        }
+    ]
+}
+
+Course {
+    "_id": {
+        "$oid": "5b200d1f34baea222ebd2c19"
+    },
+    "code": "ENG1512",
+    "name": "English II",
+    "credits": 2.0,
+    "programme": {
+        "$oid": "5ae5d9d05d10e35bdbe1a543"
+    }
+}
+Course {
+    "_id": {
+        "$oid": "5b200d1f34baea222ebd2c1a"
+    },
+    "code": "ITM1002",
+    "name": "Information Systems",
+    "credits": 3.0,
+    "programme": {
+        "$oid": "5ae5d9d05d10e35bdbe1a543"
+    }
+}
+
+CourseMaterial {
+    "_id": {
+        "$oid": "5b200d2334baea222ebd2c21"
+    },
+    "richText": null,
+    "document": {
+        "$oid": "5b200d1f34baea222ebd2c1b"
+    },
+    "publishDate": {
+        "$date": "2018-06-12T18:12:47.919Z"
+    },
+    "course": {
+        "$oid": "5b200d1f34baea222ebd2c1a"
+    },
+    "publishFaculty": {
+        "$oid": "5b1e5df9d339e76b091a2a07"
+    }
+}
+
+Assignment {
+    "_id": {
+        "$oid": "5b200d1f34baea222ebd2c1d"
+    },
+    "course": {
+        "$oid": "5b200d1f34baea222ebd2c1a"
+    },
+    "publishDate": {
+        "$date": "2018-06-12T18:12:47.919Z"
+    },
+    "submitDate": {
+        "$date": "2018-06-12T18:12:47.919Z"
+    },
+    "document": {
+        "$oid": "5b200d1f34baea222ebd2c1c"
+    }
+}
+
+AssignmentSubmission {
+    "_id": {
+        "$oid": "5b200d2634baea222ebd2c22"
+    },
+    "assignment": {
+        "$oid": "5b200d1f34baea222ebd2c1d"
+    },
+    "submitDateTime": {
+        "$date": "2018-06-12T18:12:47.919Z"
+    },
+    "student": {
+        "$oid": "5ace2878b0b7c599bac20e1c"
+    }
+}
+
+AssignmentGrade {
+    "_id": {
+        "$oid": "5b200d2734baea222ebd2c23"
+    },
+    "assignment": {
+        "$oid": "5b200d1f34baea222ebd2c1d"
+    },
+    "grade": {
+        "$oid": "5b200d1f34baea222ebd2c1e"
+    },
+    "student": {
+        "$oid": "5ace2878b0b7c599bac20e1c"
+    },
+    "byFaculty": {
+        "$oid": "5b1e5df9d339e76b091a2a07"
+    }
+}
+
+Document {
+    "_id": {
+        "$oid": "5b200d1f34baea222ebd2c1b"
+    },
+    "content": null,
+    "mimeType": "application/pdf"
+}
+Document {
+    "_id": {
+        "$oid": "5b200d1f34baea222ebd2c1c"
+    },
+    "content": null,
+    "mimeType": "image/png"
+}
+
+Grade {
+    "_id": {
+        "$oid": "5b200d1f34baea222ebd2c1e"
+    },
+    "marksObtained": 50.0,
+    "maximumMarks": 60.0
+}
