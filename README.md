@@ -6,4 +6,4 @@ The aforesaid system is currently a web based application that uses a MongoDB da
 
 More information related to this project may be available at this [main repository (exudos-webapp) ](https://github.com/gdgu/exudos-webapp).
 
-![Sample Screenshot](https://i.imgur.com/is7Wu5w.png)
+![Sample Screenshot](https://i.imgur.com/zr37AmS.png)
